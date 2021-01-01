@@ -14,8 +14,8 @@ messages = []
 app = Flask(__name__)
 
 app.secret_key = "hellokdggdkfgnkdfn@#NKnekdg"
-# "postgresql://<username>:<password>@localhost:5432/<db_name>"
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://abhi:postgrespassword!1@localhost:5432/chat_python_flask"
+
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://<username>:<password>@localhost:5432/<db_name>"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
  
 # db.init_app(app)
