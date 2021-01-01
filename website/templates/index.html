@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+
+{% if login %}
+{% block messageGreen %}{{session["name"]}} logged in! {% endblock %}
+{% endif %}
+<div id="messages_display"></div>
+<div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Type Here" id="msg">
+    <button class="btn btn-outline-primary" type="button" id="sendBtn">Send</button>
+</div>
+<script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+{% endblock %}

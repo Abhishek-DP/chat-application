@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+Register
+{% endblock %}
+{% block content %}
+<form method="POST">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" required>
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+        <label for="name" class="form-label">User Name</label>
+        <input type="text" class="form-control" name="name" id="name" required>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" id="exampleInputPassword1" required>
+    </div>
+<button type="submit" class="btn btn-primary">Submit</button>
+<div class="form-text"><a href="login">Login</a>Already have a account.</div>
+</form>
+<script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+{% endblock %}
